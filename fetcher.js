@@ -29,11 +29,11 @@ request(url, (error, response, body) => {
   console.log("body:", body); // Print the HTML for the Example homepage.
 
   // Write the body of www.example.com/ into our local index.html file; if error, throw error
-  fs.writeFile("index.html", body, function(err) {
+  fs.writeFile(file, body, function(err) {
     if (err) throw err;
     
     // If no error print the below log to terminal
     //Upon completion, it should print out a message like Downloaded and saved 1235 bytes to ./index.html.
-    console.log("Downloaded and saved 3261 bytes to ./index.html");
+    console.log(`Downloaded and saved ${sizeBytes} bytes to ${file}`);
   });
 });
